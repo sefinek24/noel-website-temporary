@@ -1,7 +1,7 @@
 {
   "name": "noel-website-temporary",
   "version": "1.8.1",
-  "description": "",
+  "description": "Tymczasowa strona (Error 423: Locked).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,5 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "helmet": "^4.6.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.2.0"
   }
 }
