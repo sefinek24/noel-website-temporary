@@ -1,15 +1,11 @@
 module.exports = {
-	apps : [{
-		name            : 'noel-website-temporary',
+	apps: [{
+		name            : 'temporary-website',
 		script          : './index.js',
 		log_date_format : 'HH:mm:ss, DD.MM.YYYY',
-		error_file      : '/home/ubuntu/discord/logs/noel-website-temporary/error.log',
-		out_file        : '/home/ubuntu/discord/logs/noel-website-temporary/out.log',
+		error_file      : '/home/ubuntu/logs/www/temporary-website/error.log',
+		out_file        : '/home/ubuntu/logs/www/temporary-website/out.log',
 	}],
 
-	deploy : {
-		production : {
-			user        : 'node',
-		},
-	},
+	deploy: { production: { user: 'node' } },
 };
