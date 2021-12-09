@@ -1,2 +1,7 @@
+# Project files & folders
 node_modules
 package-lock.json
+
+# Idea workspace files
+.idea/workspace.xml
+.idea/shelf
