@@ -1,30 +1,29 @@
 const express = require('express');
-const helmet = require('helmet');
+const { hidePoweredBy } = require('helmet');
 const { port } = require('./config.js');
-const path = require('path');
-const ejs = require('ejs');
 
 const app = express();
 
-app.use(helmet.hidePoweredBy());
+app.use(hidePoweredBy());
+app.set('view engine', 'ejs');
+app.set('views', './views');
 app.use(express.static('public'));
 
-app.engine('ejs', ejs.renderFile);
-app.set('view engine', 'ejs');
+app.get('*', (req, _, next) => {
+	console.log(`GET ${req.originalUrl}`);
+	next();
+});
 
 app.get('/', (req, res) => {
-	res.status(423).render(path.resolve('./ejs/index.ejs'));
-	console.log('GET /');
+	res.status(423).render('index');
 });
 
 app.get('/server', (req, res) => {
 	res.redirect('https://discord.gg/uV6HsqxBBC');
-	console.log('REDIRECT /server');
 });
 
 app.get('/serverUrl', (req, res) => {
 	res.redirect('https://discord.gg/uV6HsqxBBC');
-	console.log('REDIRECT /serverUrl');
 });
 
 app.use((req, res) => {
