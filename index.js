@@ -38,4 +38,4 @@ app.use((err, req, res, next) => {
 	return next;
 });
 
-app.listen(port, null, null, () => console.log(`Tymczasowa strona została uruchomiona na porcie ${port}.`));
+app.listen(port, null, null, () => console.log(`Działa na http://127.0.0.1:${port}`));
