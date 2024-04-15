@@ -9,7 +9,7 @@
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "helmet": "^7.1.0"
   }
